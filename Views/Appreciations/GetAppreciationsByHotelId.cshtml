@@ -1,0 +1,23 @@
+﻿@model IEnumerable<VotreApplication.Models.HotellerieModel.Appreciation>
+
+@{
+    ViewData["Title"] = "GetAppreciationsByHotelId";
+}
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomPers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Note)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Commentaire)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hotel.Nom)
+        </td>
+    </tr>
+}
